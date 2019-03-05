@@ -1,0 +1,13 @@
+body {
+    color: $color;
+}
+
+
+@for $i from 1 through 6 {
+    .mt-#{$i} {
+        width: 5px*$i;
+    }
+    .mb-#{$i} {
+        width: 5px*$i;
+    }
+}
