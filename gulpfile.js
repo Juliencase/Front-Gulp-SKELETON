@@ -11,13 +11,14 @@ const tsProject = ts.createProject('tsconfig.json');
 const uglify = require('gulp-uglify-es').default;
 const concat = require('gulp-concat')
 const sourcemaps = require('gulp-sourcemaps');
+const config = require('./appconfig.json');
 
 
 
 function browserSync(done) {
     browsersync.init({
         server: ['app', 'dist'],
-        port: 8080
+        port: config.server.port
     });
     done();
 };
